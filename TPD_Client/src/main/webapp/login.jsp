@@ -25,20 +25,20 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon-1">@</span>
                 </div>
-                <input class="form-control" placeholder="Enter username" name="username" type="text" required>
+                <input class="form-control" placeholder="What is your username?" name="username" type="text" required>
             </div>
-            <input class="form-control" placeholder="Enter password" name="password" type="password" required>
+            <input class="form-control" placeholder="Here goes your password." name="password" type="password" required>
 
             <%--    <button name="button" type="submit" value="login">Login</button>--%>
-            <div class="input-group mb-3 nav-fill">
+            <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <button class="btn btn-success" value="login" name="button" type="submit">Login</button>
-                    <button class="btn btn-primary" name="button" type="submit" value="register">Register</button>
+                    <button class="btn btn-success btn-block" value="login" name="button" type="submit">Login</button>
+                    <button class="btn btn-primary btn-block" name="button" type="submit" value="register">Register
+                    </button>
                 </div>
             </div>
         </div>
     </form>
-
 </div>
 </body>
 </html>

@@ -12,31 +12,25 @@
 </head>
 <body>
 <div class="wrapper">
-    <h1>Product management page for user <%= request.getSession().getAttribute("username")%>
-    </h1>
-    <div class="add-product">
-        <h2>Products</h2>
-        <form method="post" action="${pageContext.request.contextPath}/manage-products">
-            <table>
-                <tr>
-                    <td>
-                        <label>Name: </label>
-                        <input class="form-control" placeholder="Enter the product name..." name="name" type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Price: </label>
-                        <input class="form-control" placeholder="Enter the price..." name="price" type="number">
-                    </td>
-                </tr>
-            </table>
-            <div class="buttons">
-                <button class="form-button" name="button" type="submit" value="add-product">Add Product</button>
-                <button role="button" class="form-button" name="button" type="submit" value="home">Back</button>
+    <h1>What are you selling today, <%= request.getSession().getAttribute("username")%>?</h1>
+    <form method="post" action="${pageContext.request.contextPath}/manage-products">
+        <div class="container-fluid">
+            <input class="form-control" placeholder="Enter the product name..." name="name" type="text">
+            <div class="input-group mb-3">
+                <input class="form-control" placeholder="Enter the price..." name="price" type="number">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon-1">$</span>
+                </div>
             </div>
-        </form>
-    </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend buttons">
+                    <button class="form-button" name="button" type="submit" value="add-product">Add Product</button>
+                    <button role="button" class="form-button" name="button" type="submit" value="home">Back</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 </body>
 </html>

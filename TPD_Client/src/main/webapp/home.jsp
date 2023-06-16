@@ -27,7 +27,7 @@
 
         <div class="row header blue">
             <div class="cell">
-                #
+                Number
             </div>
             <div class="cell">
                 Name
@@ -36,7 +36,7 @@
                 Price
             </div>
             <div class="cell">
-                Delete
+                Action
             </div>
         </div>
         <%
@@ -47,17 +47,18 @@
                 for (Product product : products) {
         %>
         <div class="row">
-            <div class="cell" data-title="#"><%= i++%>
+            <div class="cell" data-title="Number"><%= i++%>
             </div>
             <div class="cell" data-title="Name"><%= product.getName()%>
             </div>
             <div class="cell" data-title="Price"><%= product.getPrice()%>
             </div>
-            <div class="cell" data-title="Delete">
+            <div class="cell btn btn-danger" data-title="Action">
                 <form method="delete" action="${pageContext.request.contextPath}/home">
-                    <button name="delete" value="<%= product.getId() %>" type="submit"><span
-                            class="delete-span"> X </span></button>
+                    <button class="btn btn-danger" name="delete" value="<%= product.getId() %>" type="submit"></button>
                 </form>
+                <button class="btn btn-danger" name="delete" value="<%= product.getId() %>" type="button">Delete
+                </button>
             </div>
         </div>
         <%
@@ -78,9 +79,8 @@
 </div>
 <div class="buttons">
     <form method="post" class="buttons-form" action="${pageContext.request.contextPath}/home">
-        <button role="button" class="blue-button" name="button" type="submit" value="logout">Log out</button>
-        <button role="button" class="button-orange" type="submit" name="button" value="manage-products">Manage
-            product list
+        <button role="button" class="blue-button" name="button" type="submit" value="logout">Logout</button>
+        <button role="button" class="button-orange" type="submit" name="button" value="manage-products">Add Product
         </button>
     </form>
 </div>
