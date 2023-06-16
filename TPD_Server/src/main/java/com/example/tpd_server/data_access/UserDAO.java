@@ -17,7 +17,7 @@ public final class UserDAO {
         ArrayList<User> result = new ArrayList<>();
 
         try (Connection conn = ConnectionHelper.getConnection();
-             PreparedStatement preparedStatement = conn.prepareStatement("SELECT * FROM public.\"Users\"")) {
+             PreparedStatement preparedStatement = conn.prepareStatement("SELECT * FROM public.\"users\"")) {
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -39,7 +39,7 @@ public final class UserDAO {
     public static User get(String username, String password) {
         User user = null;
         try (Connection conn = ConnectionHelper.getConnection();
-             PreparedStatement preparedStatement = conn.prepareStatement("SELECT * FROM public.\"Users\" WHERE username = ? AND password = ?")) {
+             PreparedStatement preparedStatement = conn.prepareStatement("SELECT * FROM public.\"users\" WHERE username = ? AND password = ?")) {
 
             preparedStatement.setString(1, username);
             preparedStatement.setString(2, password);
@@ -67,7 +67,7 @@ public final class UserDAO {
         }
 
         try (Connection conn = ConnectionHelper.getConnection();
-             PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO public.\"Users\"(id, username, password) VALUES (?, ?, ?)")) {
+             PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO public.\"users\"(id, username, password) VALUES (?, ?, ?)")) {
 
             preparedStatement.setInt(1, user.getId());
             preparedStatement.setString(2, user.getUsername());
