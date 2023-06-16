@@ -27,8 +27,7 @@
                 <tr>
                     <td>
                         <label>Price: </label>
-                        <input class="form-control" placeholder="Enter the price..."
-                               name="price" type="number">
+                        <input class="form-control" placeholder="Enter the price..." name="price" type="number">
                     </td>
                 </tr>
             </table>

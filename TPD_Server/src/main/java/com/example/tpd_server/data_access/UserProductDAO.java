@@ -72,7 +72,7 @@ public class UserProductDAO {
     public static void delete(int userId, int productId) {
 
         try (Connection conn = ConnectionHelper.getConnection();
-             PreparedStatement preparedStatement = conn.prepareStatement("DELETE FROM public.\"userProducts\" WHERE userId = ? AND productId = ?")) {
+             PreparedStatement preparedStatement = conn.prepareStatement("DELETE FROM public.\"userProducts\" WHERE \"userId\" = ? AND \"productId\" = ?")) {
 
             preparedStatement.setInt(1, userId);
             preparedStatement.setInt(2, productId);

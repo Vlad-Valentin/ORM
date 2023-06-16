@@ -8,6 +8,7 @@ import java.io.Serializable;
 @Stateless
 public class Product implements ProductInterface, Serializable {
     private int id;
+
     private String name;
 
     private int price;
@@ -53,6 +54,6 @@ public class Product implements ProductInterface, Serializable {
 
     @Override
     public void setPrice(int price) {
-        this.price = 0;
+        this.price = price;
     }
 }

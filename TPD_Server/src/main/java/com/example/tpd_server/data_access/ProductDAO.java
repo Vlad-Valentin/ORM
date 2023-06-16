@@ -63,9 +63,7 @@ public class ProductDAO {
         }
 
         try (Connection conn = ConnectionHelper.getConnection();
-             PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO public.\"products\"(\n" +
-                     "\tid, name, price)\n" +
-                     "\tVALUES (?, ?, ?);")) {
+             PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO public.\"products\" (id, name, price) VALUES (?, ?, ?);")) {
 
             preparedStatement.setInt(1, product.getId());
             preparedStatement.setString(2, product.getName());

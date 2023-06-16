@@ -10,6 +10,8 @@ public class Product implements ProductInterface, Serializable {
     private int id;
     private String name;
 
+    private int price;
+
     public Product(int id, String name, int price) {
         this.id = id;
         this.name = name;
@@ -42,6 +44,4 @@ public class Product implements ProductInterface, Serializable {
     public void setPrice(int price) {
         this.price = price;
     }
-
-    private int price;
 }
