@@ -1,9 +1,9 @@
 package com.example.tpd_client.controllers;
 
-import com.example.tpd_client.data_access.MotorcycleDAO;
-import com.example.tpd_client.data_access.UserMotorcycleDAO;
+import com.example.tpd_client.data_access.ProductDAO;
+import com.example.tpd_client.data_access.UserProductDAO;
 import com.example.tpd_client.models.User;
-import com.example.tpd_client.models.UserMotorcycle;
+import com.example.tpd_client.models.UserProduct;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -31,9 +31,9 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int userId = Integer.parseInt(req.getSession().getAttribute("userId").toString());
-        int motorcycleId = Integer.parseInt(req.getParameter("delete"));
+        int productId = Integer.parseInt(req.getParameter("delete"));
         try {
-            UserMotorcycleDAO.delete(userId, motorcycleId);
+            UserProductDAO.delete(userId, productId);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -45,8 +45,8 @@ public class HomeServlet extends HttpServlet {
         String button = req.getParameter("button");
         if (button.equals("logout")) {
             resp.sendRedirect(req.getContextPath() + "/login");
-        } else if (button.equals("manage-motorcycles")) {
-            resp.sendRedirect(req.getContextPath() + "/manage-motorcycles");
+        } else if (button.equals("manage-products")) {
+            resp.sendRedirect(req.getContextPath() + "/manage-products");
         }
     }
 }

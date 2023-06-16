@@ -7,16 +7,16 @@
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
     <style>
-        <%@include file="/css/manage-motorcycles.css" %>
+        <%@include file="/css/manage-products.css" %>
     </style>
 </head>
 <body>
 <div class="wrapper">
-    <h1>Motorcycle management page for user <%= request.getSession().getAttribute("username")%>
+    <h1>Product management page for user <%= request.getSession().getAttribute("username")%>
     </h1>
-    <div class="add-motorcycle">
-        <h2>Motorcycle addition form</h2>
-        <form method="post" action="${pageContext.request.contextPath}/manage-motorcycles">
+    <div class="add-product">
+        <h2>Product addition form</h2>
+        <form method="post" action="${pageContext.request.contextPath}/manage-products">
             <table>
                 <tr>
                     <td>
@@ -27,12 +27,13 @@
                 <tr>
                     <td>
                         <label>Year of production:</label>
-                        <input class="form-control" placeholder="Enter the year of production..." name="yearOfProduction" type="number">
+                        <input class="form-control" placeholder="Enter the year of production..."
+                               name="yearOfProduction" type="number">
                     </td>
                 </tr>
             </table>
             <div class="buttons">
-                <button class="form-button" name="button" type="submit" value="add-motorcycle">Add motorcycle</button>
+                <button class="form-button" name="button" type="submit" value="add-product">Add product</button>
                 <button role="button" class="form-button" name="button" type="submit" value="home">Back to home</button>
             </div>
         </form>

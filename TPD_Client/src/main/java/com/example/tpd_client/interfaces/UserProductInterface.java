@@ -3,9 +3,12 @@ package com.example.tpd_client.interfaces;
 import javax.ejb.Local;
 
 @Local
-public interface UserMotorcycleInterface {
+public interface UserProductInterface {
     int getUserId();
+
     void setUserId(int userId);
-    int getMotorcycleId();
-    void setMotorcycleId(int motorcycleId);
+
+    int getProductId();
+
+    void setProductId(int productId);
 }

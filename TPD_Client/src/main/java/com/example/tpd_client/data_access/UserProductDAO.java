@@ -1,6 +1,7 @@
 package com.example.tpd_client.data_access;
 
-import com.example.tpd_client.models.Motorcycle;
+import com.example.tpd_client.models.Product;
+import com.example.tpd_client.models.UserProduct;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -10,13 +11,14 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
+import java.util.List;
 
-public final class MotorcycleDAO {
+public class UserProductDAO {
     private final static HttpClient client = HttpClient.newHttpClient();
 
-    public static ArrayList<Motorcycle> getAllMotorcycles() throws IOException, InterruptedException {
+    public static ArrayList<UserProduct> getAllUserProducts() throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/motorcycles"))
+                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/user-products"))
                 .header("Accept", "application/json")
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -24,13 +26,13 @@ public final class MotorcycleDAO {
             return null;
         }
         ObjectMapper mapper = new ObjectMapper();
-        return mapper.readValue(response.body(), new TypeReference<ArrayList<Motorcycle>>() {
+        return mapper.readValue(response.body(), new TypeReference<ArrayList<UserProduct>>() {
         });
     }
 
-    public static Motorcycle get(int id) throws IOException, InterruptedException {
+    public static List<Product> getProductsForUser(int userId) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/motorcycle/" + id))
+                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/user-products/" + userId))
                 .header("Accept", "application/json")
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -38,27 +40,26 @@ public final class MotorcycleDAO {
             return null;
         }
         ObjectMapper mapper = new ObjectMapper();
-        return mapper.readValue(response.body(), new TypeReference<Motorcycle>() {
+        return mapper.readValue(response.body(), new TypeReference<List<Product>>() {
         });
     }
 
 
-
-    public static void add(Motorcycle motorcycle) throws IOException, InterruptedException {
+    public static void add(UserProduct userProduct) throws IOException, InterruptedException {
         ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(motorcycle);
+        String json = mapper.writeValueAsString(userProduct);
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/motorcycles"))
+                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/user-products"))
                 .POST(HttpRequest.BodyPublishers.ofString(json))
                 .header("Accept", "application/json")
                 .build();
         client.send(request, HttpResponse.BodyHandlers.ofString());
     }
 
-    public static void delete(Motorcycle motorcycle) throws IOException, InterruptedException {
-        ObjectMapper mapper = new ObjectMapper();
+    public static void delete(int userId, int productId) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/motorcycles/" + motorcycle.getId()))
+                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/user-products/" +
+                        userId + "/" + productId))
                 .DELETE()
                 .header("Accept", "application/json")
                 .build();
