@@ -17,13 +17,12 @@
 
 <div class="center">
     <h1>
-
         Hello, <%= request.getSession().getAttribute("username")%>!
     </h1>
 </div>
 
 <div class="product-list">
-    <h2>You own the following products:</h2>
+    <h3>These are your products listed for sale!</h3>
     <div class="table">
 
         <div class="row header blue">

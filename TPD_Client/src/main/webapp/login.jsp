@@ -18,33 +18,24 @@
 <body>
 
 <div class="wrapper">
-    <H1 class="title">Login</H1>
+    <h1 class="title">Login</h1>
     <form method="post" action="${pageContext.request.contextPath}/login">
-        <table>
-            <tr>
-                <td>
-                    <label>Username: </label>
-                    <input class="form-control" placeholder="Enter your username..." required name="username" type="text">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Password: </label>
-                    <input class="form-control" placeholder="Enter your password..." required name="password" type="password">
-                </td>
+        <div class="container-fluid">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon-1">@</span>
+                </div>
+                <input class="form-control" placeholder="Enter username" name="username" type="text" required>
+            </div>
+            <input class="form-control" placeholder="Enter password" name="password" type="password" required>
 
-            </tr>
-        </table>
-        <%--    <button name="button" type="submit" value="login">Login</button>--%>
-        <div class="text-center text-lg-start mt-4 pt-2 form-buttons">
-            <button class="form-button" value="login" name="button"
-                    style="padding-left: 2.5rem; padding-right: 2.5rem;"
-                    type="submit">
-                Log In
-            </button>
-
-            <button class="form-button" name="button" type="submit" value="register">Register</button>
-
+            <%--    <button name="button" type="submit" value="login">Login</button>--%>
+            <div class="input-group mb-3 nav-fill">
+                <div class="input-group-prepend">
+                    <button class="btn btn-success" value="login" name="button" type="submit">Login</button>
+                    <button class="btn btn-primary" name="button" type="submit" value="register">Register</button>
+                </div>
+            </div>
         </div>
     </form>
 

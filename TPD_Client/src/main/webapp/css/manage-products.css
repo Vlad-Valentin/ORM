@@ -1,5 +1,4 @@
 .wrapper {
-    background: silver;
     display: flex;
     flex-direction: column;
     gap: 5vh;

@@ -1,5 +1,4 @@
 .wrapper {
-    background: silver;
     display: flex;
     flex-direction: column;
     gap: 5vh;
@@ -24,7 +23,7 @@ label {
 }
 
 .title{
-    font-family: "JetBrains Mono", monospace;
+    /*font-family: "JetBrains Mono", monospace;*/
 }
 
 .form-buttons{
