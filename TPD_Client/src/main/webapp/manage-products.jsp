@@ -15,26 +15,26 @@
     <h1>Product management page for user <%= request.getSession().getAttribute("username")%>
     </h1>
     <div class="add-product">
-        <h2>Product addition form</h2>
+        <h2>Products</h2>
         <form method="post" action="${pageContext.request.contextPath}/manage-products">
             <table>
                 <tr>
                     <td>
-                        <label>Brand:</label>
-                        <input class="form-control" placeholder="Enter the brand name..." name="brand" type="text">
+                        <label>Name: </label>
+                        <input class="form-control" placeholder="Enter the product name..." name="name" type="text">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label>Year of production:</label>
-                        <input class="form-control" placeholder="Enter the year of production..."
-                               name="yearOfProduction" type="number">
+                        <label>Price: </label>
+                        <input class="form-control" placeholder="Enter the price..."
+                               name="price" type="number">
                     </td>
                 </tr>
             </table>
             <div class="buttons">
-                <button class="form-button" name="button" type="submit" value="add-product">Add product</button>
-                <button role="button" class="form-button" name="button" type="submit" value="home">Back to home</button>
+                <button class="form-button" name="button" type="submit" value="add-product">Add Product</button>
+                <button role="button" class="form-button" name="button" type="submit" value="home">Back</button>
             </div>
         </form>
     </div>

@@ -18,18 +18,18 @@
 <body>
 
 <div class="wrapper">
-    <H1 class="title">Login / Register form</H1>
+    <H1 class="title">Login</H1>
     <form method="post" action="${pageContext.request.contextPath}/login">
         <table>
             <tr>
                 <td>
-                    <label>Username:</label>
+                    <label>Username: </label>
                     <input class="form-control" placeholder="Enter your username..." required name="username" type="text">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label>Password:</label>
+                    <label>Password: </label>
                     <input class="form-control" placeholder="Enter your password..." required name="password" type="password">
                 </td>
 
