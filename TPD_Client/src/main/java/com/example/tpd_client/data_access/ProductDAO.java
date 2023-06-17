@@ -16,7 +16,7 @@ public final class ProductDAO {
 
     public static ArrayList<Product> getAllProducts() throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/products"))
+                .uri(URI.create("http://34.116.178.195:8080/server/api/products"))
                 .header("Accept", "application/json")
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -30,7 +30,7 @@ public final class ProductDAO {
 
     public static Product get(int id) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/product/" + id))
+                .uri(URI.create("http://34.116.178.195:8080/server/api/product/" + id))
                 .header("Accept", "application/json")
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -47,7 +47,7 @@ public final class ProductDAO {
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(product);
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/products"))
+                .uri(URI.create("http://34.116.178.195:8080/server/api/products"))
                 .POST(HttpRequest.BodyPublishers.ofString(json))
                 .header("Accept", "application/json")
                 .build();
@@ -57,7 +57,7 @@ public final class ProductDAO {
     public static void delete(Product product) throws IOException, InterruptedException {
         ObjectMapper mapper = new ObjectMapper();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/products/" + product.getId()))
+                .uri(URI.create("http://34.116.178.195:8080/server/api/products/" + product.getId()))
                 .DELETE()
                 .header("Accept", "application/json")
                 .build();
