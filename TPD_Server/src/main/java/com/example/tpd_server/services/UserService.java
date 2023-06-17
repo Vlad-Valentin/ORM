@@ -1,6 +1,6 @@
 package com.example.tpd_server.services;
 
-import com.example.tpd_server.data_access.UserDAO;
+import com.example.tpd_server.dal.UserDAO;
 import com.example.tpd_server.models.User;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
