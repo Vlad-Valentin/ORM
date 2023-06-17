@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.AppTest" time="0.015" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.AppTest" time="0.017" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\Valentin\Documents\Master\ORM\ConnectionArtifact\ConnectionPackage\target\test-classes;C:\Users\Valentin\Documents\Master\ORM\ConnectionArtifact\ConnectionPackage\target\classes;C:\Users\Valentin\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
+    <property name="java.class.path" value="C:\Users\Valentin\Documents\Master\ORM\ConnectionHelperArtifact\connection-helper-artifact\target\test-classes;C:\Users\Valentin\Documents\Master\ORM\ConnectionHelperArtifact\connection-helper-artifact\target\classes;C:\Users\Valentin\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Users\Valentin\Documents\Master\TPD\JDK17\bin"/>
-    <property name="sun.java.command" value="C:\Users\Valentin\AppData\Local\Temp\surefire1905680767573752818\surefirebooter-20230617211454013_3.jar C:\Users\Valentin\AppData\Local\Temp\surefire1905680767573752818 2023-06-17T21-14-53_602-jvmRun1 surefire-20230617211454013_1tmp surefire_0-20230617211454013_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Valentin\AppData\Local\Temp\surefire9772583832846960453\surefirebooter-20230617213723245_3.jar C:\Users\Valentin\AppData\Local\Temp\surefire9772583832846960453 2023-06-17T21-37-23_108-jvmRun1 surefire-20230617213723245_1tmp surefire_0-20230617213723245_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\Valentin\Documents\Master\ORM\ConnectionArtifact\ConnectionPackage\target\test-classes;C:\Users\Valentin\Documents\Master\ORM\ConnectionArtifact\ConnectionPackage\target\classes;C:\Users\Valentin\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\Valentin\Documents\Master\ORM\ConnectionHelperArtifact\connection-helper-artifact\target\test-classes;C:\Users\Valentin\Documents\Master\ORM\ConnectionHelperArtifact\connection-helper-artifact\target\classes;C:\Users\Valentin\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Valentin"/>
     <property name="user.language" value="en"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2022-01-18"/>
     <property name="java.home" value="C:\Users\Valentin\Documents\Master\TPD\JDK17"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\Valentin\Documents\Master\ORM\ConnectionArtifact\ConnectionPackage"/>
+    <property name="basedir" value="C:\Users\Valentin\Documents\Master\ORM\ConnectionHelperArtifact\connection-helper-artifact"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Valentin\AppData\Local\Temp\surefire1905680767573752818\surefirebooter-20230617211454013_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Valentin\AppData\Local\Temp\surefire9772583832846960453\surefirebooter-20230617213723245_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.2+8-86"/>
@@ -44,7 +44,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\Valentin\AppData\Local\Temp\"/>
     <property name="java.version" value="17.0.2"/>
-    <property name="user.dir" value="C:\Users\Valentin\Documents\Master\ORM\ConnectionArtifact\ConnectionPackage"/>
+    <property name="user.dir" value="C:\Users\Valentin\Documents\Master\ORM\ConnectionHelperArtifact\connection-helper-artifact"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>

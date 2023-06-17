@@ -2,6 +2,7 @@ package com.example.product_service.dal;
 
 //import com.example.connection_package.ConnectionHelper;
 
+import com.example.connection_package.ConnectionHelper;
 import com.example.product_service.models.Product;
 import com.example.product_service.models.UserProduct;
 
