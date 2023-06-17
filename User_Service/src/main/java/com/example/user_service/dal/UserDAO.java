@@ -1,6 +1,6 @@
 package com.example.user_service.dal;
 
-//import com.example.connection_package.ConnectionHelper;
+import com.example.ConnectionHelper;
 import com.example.user_service.models.User;
 
 import java.sql.Connection;

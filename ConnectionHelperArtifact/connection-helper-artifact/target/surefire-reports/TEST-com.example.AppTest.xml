@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Users\Valentin\Documents\Master\TPD\JDK17\bin"/>
-    <property name="sun.java.command" value="C:\Users\Valentin\AppData\Local\Temp\surefire9772583832846960453\surefirebooter-20230617213723245_3.jar C:\Users\Valentin\AppData\Local\Temp\surefire9772583832846960453 2023-06-17T21-37-23_108-jvmRun1 surefire-20230617213723245_1tmp surefire_0-20230617213723245_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Valentin\AppData\Local\Temp\surefire12550757216513205631\surefirebooter-20230617214934095_3.jar C:\Users\Valentin\AppData\Local\Temp\surefire12550757216513205631 2023-06-17T21-49-33_957-jvmRun1 surefire-20230617214934095_1tmp surefire_0-20230617214934095_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Valentin\Documents\Master\ORM\ConnectionHelperArtifact\connection-helper-artifact\target\test-classes;C:\Users\Valentin\Documents\Master\ORM\ConnectionHelperArtifact\connection-helper-artifact\target\classes;C:\Users\Valentin\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Valentin\AppData\Local\Temp\surefire9772583832846960453\surefirebooter-20230617213723245_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Valentin\AppData\Local\Temp\surefire12550757216513205631\surefirebooter-20230617214934095_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.2+8-86"/>
@@ -56,5 +56,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testApp" classname="com.example.AppTest" time="0.002"/>
+  <testcase name="testApp" classname="com.example.AppTest" time="0.001"/>
 </testsuite>
