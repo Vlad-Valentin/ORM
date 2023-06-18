@@ -8,7 +8,7 @@ import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/store-api")
+@Path("/fake-store")
 public class FakeStoreResource {
     private static final String API_URL = "https://fakestoreapi.com/products";
 
