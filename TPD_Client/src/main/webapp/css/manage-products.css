@@ -1,3 +1,29 @@
+h1 {
+    animation: bounce-horizontal ease-in-out 1.5s infinite;
+    font-weight: bolder;
+}
+
+@keyframes bounce-horizontal {
+    0% {
+        transform: scaleX(1);
+    }
+    20% {
+        transform: scaleX(0.9);
+    }
+    40% {
+        transform: scaleX(1.1);
+    }
+    60% {
+        transform: scaleX(0.95);
+    }
+    80% {
+        transform: scaleX(1.05);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -61,4 +87,8 @@ label {
     gap: 3vh;
     align-items: center;
     justify-content: center;
+}
+
+button{
+    z-index: 100;
 }

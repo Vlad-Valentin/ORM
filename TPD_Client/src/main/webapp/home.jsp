@@ -23,23 +23,28 @@
 
 <div>
     <form class="buttons-form" method="post" action="${pageContext.request.contextPath}/home">
-        <button role="button" class="btn btn-warning shadow-lg btn-login text-white text-bold" name="button" type="submit"
+        <button role="button" class="btn btn-warning btn-lg shadow-lg btn-login text-white text-bold" name="button"
+                type="submit"
                 value="logout">Logout
-        </button>
-        <button role="button" class="btn btn-success shadow-lg btn-register text-white text-bold" type="submit" name="button"
-                value="manage-products">Add Product
         </button>
     </form>
 </div>
 
 <div class="center mt-3">
-    <h1>
+    <h1 class="mt-3">
         Hello, <%= request.getSession().getAttribute("username")%>!
     </h1>
 </div>
 
 <div class="product-list">
     <h4 class="mb-3">These are your products listed for sale!</h4>
+    <form method="post" action="${pageContext.request.contextPath}/home">
+        <button role="button" class="btn btn-success btn-lg shadow-lg btn-register text-white text-bold mb-3"
+                type="submit"
+                name="button"
+                value="manage-products">Add Product
+        </button>
+    </form>
     <table class="table table-hover table-striped table-dark">
         <thead>
         <tr>
@@ -63,7 +68,7 @@
             </th>
             <th scope="row">
                 <form class="btn-delete-form" method="delete" action="${pageContext.request.contextPath}/home">
-                    <button class="btn btn-danger btn-register mt-3" name="delete" value="<%= product.getId() %>"
+                    <button class="btn btn-danger btn-lg btn-register mt-3" name="delete" value="<%= product.getId() %>"
                             type="submit">Delete
                     </button>
                 </form>

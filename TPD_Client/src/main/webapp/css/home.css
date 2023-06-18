@@ -6,6 +6,32 @@ body {
     background: white;
 }
 
+h1 {
+    animation: bounce-horizontal ease-in-out 1.5s infinite;
+    font-weight: bolder;
+}
+
+@keyframes bounce-horizontal {
+    0% {
+        transform: scaleX(1);
+    }
+    20% {
+        transform: scaleX(0.9);
+    }
+    40% {
+        transform: scaleX(1.1);
+    }
+    60% {
+        transform: scaleX(0.95);
+    }
+    80% {
+        transform: scaleX(1.05);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
 th {
     vertical-align: middle;
 }
@@ -14,8 +40,9 @@ th {
     position: fixed;
     display: flex;
     flex-direction: row;
-    top: 0;
-    margin: 3vh;
+    left: 0;
+    bottom: 0;
+    margin: 5vh;
     gap: 3vh;
 }
 
@@ -36,10 +63,36 @@ table, .table {
     display: table;
     text-align: center;
     border-radius: 1rem;
+    animation: bounce-vertical ease-out 0.5s;
+}
+
+@keyframes bounce-vertical {
+    0% {
+        transform: scaleY(1);
+    }
+    20% {
+        transform: scaleY(0.9);
+    }
+    40% {
+        transform: scaleY(1.1);
+    }
+    60% {
+        transform: scaleY(0.95);
+    }
+    80% {
+        transform: scaleY(1.05);
+    }
+    100% {
+        transform: scaleY(1);
+    }
 }
 
 .btn-delete-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+button{
+    z-index: 100;
 }

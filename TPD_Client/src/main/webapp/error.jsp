@@ -22,7 +22,7 @@
     <title>Error</title>
 </head>
 <body>
-<div class="p-3 mb-2 bg-danger text-white text-bold rounded shadow-lg">
+<div class="p-3 mb-2 bg-danger text-white text-bold rounded shadow-lg panel">
     <h1>Hold on! :(</h1>
     <p>${errorMessage}</p>
 </div>

@@ -1,3 +1,37 @@
+h1 {
+    animation: bounce-horizontal ease-in-out 1.5s infinite;
+    font-weight: bolder;
+}
+
+@keyframes bounce-horizontal {
+    0% {
+        transform: scaleX(1);
+    }
+    20% {
+        transform: scaleX(0.9);
+    }
+    40% {
+        transform: scaleX(1.1);
+    }
+    60% {
+        transform: scaleX(0.95);
+    }
+    80% {
+        transform: scaleX(1.05);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
 body {
     margin: 5rem;
+}
+
+.panel {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    animation: bounce-horizontal ease-in-out 10s infinite;
 }

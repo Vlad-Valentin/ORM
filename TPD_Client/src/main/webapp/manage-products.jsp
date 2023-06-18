@@ -21,7 +21,7 @@
             </div>
 
             <div class="input-group mb-3">
-                <input class="form-control shadow-sm" placeholder="Enter the price..." name="price" type="number">
+                <input class="form-control shadow-sm" placeholder="Enter the price..." name="price" type="number" min="1">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon-1">$</span>
                 </div>
@@ -30,11 +30,11 @@
             <div class="row justify-content-center all-buttons">
                 <div class="col-md-6">
                     <div class="d-flex justify-content-between">
-                        <button class="btn btn-success shadow-lg text-bold" name="button" type="submit"
+                        <button class="btn btn-success btn-lg btn-login shadow-lg text-bold" name="button" type="submit"
                                 value="add-product">Add
                         </button>
                         <div class="mx-2"></div>
-                        <button role="button" class="btn btn-info shadow-lg btn-register text-white text-bold" name="button"
+                        <button role="button" class="btn btn-warning btn-lg shadow-lg btn-register text-white text-bold" name="button"
                                 type="submit" value="home">Back
                         </button>
                     </div>
