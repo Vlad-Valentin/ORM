@@ -7,38 +7,47 @@
 <html>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 <style>
+    <%@include file="/css/login.css" %>
     <%@include file="/css/home.css" %>
 </style>
 <head>
-    <title>Title</title>
+    <title>Welcome, <%= request.getSession().getAttribute("username")%>!</title>
 </head>
 <body>
 
-<div class="center">
+<div>
+    <form class="buttons-form" method="post" action="${pageContext.request.contextPath}/home">
+        <button role="button" class="btn btn-warning shadow-lg btn-login text-bold" name="button" type="submit"
+                value="logout">Logout
+        </button>
+        <button role="button" class="btn btn-success shadow-lg btn-register text-white text-bold" type="submit" name="button"
+                value="manage-products">Add Product
+        </button>
+    </form>
+</div>
+
+<div class="center mt-3">
     <h1>
         Hello, <%= request.getSession().getAttribute("username")%>!
     </h1>
 </div>
 
 <div class="product-list">
-    <h3>These are your products listed for sale!</h3>
-    <div class="table">
-
-        <div class="row header blue">
-            <div class="cell">
-                Number
-            </div>
-            <div class="cell">
-                Name
-            </div>
-            <div class="cell">
-                Price
-            </div>
-            <div class="cell">
-                Action
-            </div>
-        </div>
+    <h4 class="mb-3">These are your products listed for sale!</h4>
+    <table class="table table-hover table-striped table-dark">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
         <%
             if (request.getSession().getAttribute("errorMessage") == null) {
                 int i = 1;
@@ -46,21 +55,20 @@
                 List<Product> products = UserProductDAO.getProductsForUser(userId);
                 for (Product product : products) {
         %>
-        <div class="row">
-            <div class="cell" data-title="Number"><%= i++%>
-            </div>
-            <div class="cell" data-title="Name"><%= product.getName()%>
-            </div>
-            <div class="cell" data-title="Price"><%= product.getPrice()%>
-            </div>
-            <div class="cell btn btn-danger" data-title="Action">
-                <form method="delete" action="${pageContext.request.contextPath}/home">
-                    <button class="btn btn-danger" name="delete" value="<%= product.getId() %>" type="submit"></button>
+        <tbody>
+        <tr>
+            <th scope="row"><%= product.getName()%>
+            </th>
+            <th scope="row"><%= product.getPrice()%>
+            </th>
+            <th scope="row">
+                <form class="btn-delete-form" method="delete" action="${pageContext.request.contextPath}/home">
+                    <button class="btn btn-danger btn-register mt-3" name="delete" value="<%= product.getId() %>"
+                            type="submit">Delete
+                    </button>
                 </form>
-                <button class="btn btn-danger" name="delete" value="<%= product.getId() %>" type="button">Delete
-                </button>
-            </div>
-        </div>
+            </th>
+        </tr>
         <%
             }
         } else {
@@ -73,16 +81,8 @@
         <%
             }
         %>
-
-
-    </div>
-</div>
-<div class="buttons">
-    <form method="post" class="buttons-form" action="${pageContext.request.contextPath}/home">
-        <button role="button" class="blue-button" name="button" type="submit" value="logout">Logout</button>
-        <button role="button" class="button-orange" type="submit" name="button" value="manage-products">Add Product
-        </button>
-    </form>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>

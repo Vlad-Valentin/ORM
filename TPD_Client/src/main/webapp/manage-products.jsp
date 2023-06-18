@@ -7,6 +7,7 @@
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
     <style>
+        <%@include file="/css/login.css" %>
         <%@include file="/css/manage-products.css" %>
     </style>
 </head>
@@ -15,18 +16,28 @@
     <h1>What are you selling today, <%= request.getSession().getAttribute("username")%>?</h1>
     <form method="post" action="${pageContext.request.contextPath}/manage-products">
         <div class="container-fluid">
-            <input class="form-control" placeholder="Enter the product name..." name="name" type="text">
             <div class="input-group mb-3">
-                <input class="form-control" placeholder="Enter the price..." name="price" type="number">
+                <input class="form-control shadow-sm" placeholder="Enter the product name..." name="name" type="text">
+            </div>
+
+            <div class="input-group mb-3">
+                <input class="form-control shadow-sm" placeholder="Enter the price..." name="price" type="number">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon-1">$</span>
                 </div>
             </div>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend buttons">
-                    <button class="form-button" name="button" type="submit" value="add-product">Add Product</button>
-                    <button role="button" class="form-button" name="button" type="submit" value="home">Back</button>
+            <div class="row justify-content-center all-buttons">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-success shadow-lg text-bold" name="button" type="submit"
+                                value="add-product">Add
+                        </button>
+                        <div class="mx-2"></div>
+                        <button role="button" class="btn btn-info shadow-lg btn-register text-white text-bold" name="button"
+                                type="submit" value="home">Back
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

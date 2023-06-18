@@ -8,7 +8,7 @@
     height: 100vh;
 }
 
-tr > td{
+tr > td {
     display: flex;
     flex-direction: row;
     gap: 3vw;
@@ -23,11 +23,7 @@ label {
     text-align: right;
 }
 
-.title{
-    /*font-family: "JetBrains Mono", monospace;*/
-}
-
-.form-buttons{
+.form-buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -35,7 +31,7 @@ label {
     gap: 5vw;
 }
 
-.form-button{
+.form-button {
     border-radius: 4px;
     background: black;
     color: white;
@@ -43,6 +39,20 @@ label {
     transition: 0.35s cubic-bezier(0.35, 0.9, 0.9, 0.25);
 }
 
-.form-button:hover{
+.form-button:hover {
     transform: scale(105%) rotate(3deg);
+}
+
+.all-buttons {
+    margin-top: 2rem;
+    width: 50vh;
+}
+
+.btn-login,
+.btn-register {
+    transition: .1s cubic-bezier(.3, .2, .5, .5);
+}
+
+.btn-login:hover,.btn-register:hover {
+    transform: scale(110%);
 }

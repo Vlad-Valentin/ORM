@@ -18,23 +18,33 @@
 <body>
 
 <div class="wrapper">
-    <h1 class="title">Login</h1>
+    <h1>Login</h1>
     <form method="post" action="${pageContext.request.contextPath}/login">
         <div class="container-fluid">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon-1">@</span>
                 </div>
-                <input class="form-control" placeholder="What is your username?" name="username" type="text" required>
+                <input class="form-control shadow-sm" placeholder="What is your username?" name="username" type="text"
+                       required>
             </div>
-            <input class="form-control" placeholder="Here goes your password." name="password" type="password" required>
 
-            <%--    <button name="button" type="submit" value="login">Login</button>--%>
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <button class="btn btn-success btn-block" value="login" name="button" type="submit">Login</button>
-                    <button class="btn btn-primary btn-block" name="button" type="submit" value="register">Register
-                    </button>
+                <input class="form-control shadow-sm" placeholder="Here goes your password." name="password"
+                       type="password" required>
+            </div>
+
+            <div class="row justify-content-center all-buttons">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-success shadow-lg btn-login text-bold" value="login" name="button"
+                                type="submit">Login
+                        </button>
+                        <div class="mx-2"></div>
+                        <button class="btn btn-primary shadow-lg btn-register text-bold" name="button" type="submit"
+                                value="register">Register
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
