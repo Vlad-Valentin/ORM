@@ -5,15 +5,15 @@
         crossorigin="anonymous"></script>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<style>
-    <%@include file="/css/login.css" %>
-</style>
 <head>
     <title>Login</title>
     <%--        <jsp:include page="utils/bootstrap.jsp"/>--%>
     <link href="utils/button_link.css" rel="stylesheet" type="text/css">
     <link href="utils/layout.css" rel="stylesheet" type="text/css">
     <link href="utils/alert_box.css" rel="stylesheet" type="text/css">
+    <style>
+        <%@include file="/css/login.css" %>
+    </style>
 </head>
 <body>
 

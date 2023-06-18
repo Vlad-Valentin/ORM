@@ -18,7 +18,7 @@ public class UserProductDAO {
 
     public static ArrayList<UserProduct> getAllUserProducts() throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://34.116.178.195:8080/server/api/user-products"))
+                .uri(URI.create("http://34.116.178.195:8080/product-service/api/user-products"))
                 .header("Accept", "application/json")
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -32,7 +32,7 @@ public class UserProductDAO {
 
     public static List<Product> getProductsForUser(int userId) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://34.116.178.195:8080/server/api/user-products/" + userId))
+                .uri(URI.create("http://34.116.178.195:8080/product-service/api/user-products/" + userId))
                 .header("Accept", "application/json")
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -49,7 +49,7 @@ public class UserProductDAO {
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(userProduct);
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://34.116.178.195:8080/server/api/user-products"))
+                .uri(URI.create("http://34.116.178.195:8080/product-service/api/user-products"))
                 .POST(HttpRequest.BodyPublishers.ofString(json))
                 .header("Accept", "application/json")
                 .build();
@@ -58,7 +58,7 @@ public class UserProductDAO {
 
     public static void delete(int userId, int productId) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://34.116.178.195:8080/server/api/user-products/" +
+                .uri(URI.create("http://34.116.178.195:8080/product-service/api/user-products/" +
                         userId + "/" + productId))
                 .DELETE()
                 .header("Accept", "application/json")

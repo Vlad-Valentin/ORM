@@ -17,7 +17,7 @@ public final class UserDAO {
 
     public static ArrayList<User> getAllUsers() throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://34.116.178.195:8080/server/api/users"))
+                .uri(URI.create("http://34.116.178.195:8080/user-service/api/users"))
                 .header("Accept", "application/json")
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -31,7 +31,7 @@ public final class UserDAO {
 
     public static User get(String username, String password) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://34.116.178.195:8080/server/api/users/" + username + "/" + password))
+                .uri(URI.create("http://34.116.178.195:8080/user-service/api/users/" + username + "/" + password))
                 .header("Accept", "application/json")
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -49,7 +49,7 @@ public final class UserDAO {
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(user);
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://34.116.178.195:8080/server/api/users"))
+                .uri(URI.create("http://34.116.178.195:8080/user-service/api/users"))
                 .POST(HttpRequest.BodyPublishers.ofString(json))
                 .header("Accept", "application/json")
                 .build();

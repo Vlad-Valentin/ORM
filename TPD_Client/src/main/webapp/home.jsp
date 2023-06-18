@@ -23,7 +23,7 @@
 
 <div>
     <form class="buttons-form" method="post" action="${pageContext.request.contextPath}/home">
-        <button role="button" class="btn btn-warning shadow-lg btn-login text-bold" name="button" type="submit"
+        <button role="button" class="btn btn-warning shadow-lg btn-login text-white text-bold" name="button" type="submit"
                 value="logout">Logout
         </button>
         <button role="button" class="btn btn-success shadow-lg btn-register text-white text-bold" type="submit" name="button"
