@@ -1,6 +1,6 @@
 package com.example.tpd_client.controllers;
 
-import com.example.tpd_client.data_access.UserDAO;
+import com.example.tpd_client.dal.UserDAO;
 import com.example.tpd_client.models.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

@@ -1,4 +1,4 @@
-package com.example.tpd_client.data_access;
+package com.example.tpd_client.dal;
 
 import com.example.tpd_client.models.User;
 import com.fasterxml.jackson.core.type.TypeReference;

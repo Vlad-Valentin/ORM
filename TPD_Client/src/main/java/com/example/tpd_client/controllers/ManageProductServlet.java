@@ -1,7 +1,7 @@
 package com.example.tpd_client.controllers;
 
-import com.example.tpd_client.data_access.ProductDAO;
-import com.example.tpd_client.data_access.UserProductDAO;
+import com.example.tpd_client.dal.ProductDAO;
+import com.example.tpd_client.dal.UserProductDAO;
 import com.example.tpd_client.models.Product;
 import com.example.tpd_client.models.UserProduct;
 import jakarta.servlet.ServletException;

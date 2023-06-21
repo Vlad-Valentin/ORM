@@ -1,16 +1,12 @@
 package com.example.tpd_client.controllers;
 
-import com.example.tpd_client.data_access.ProductDAO;
-import com.example.tpd_client.data_access.UserProductDAO;
-import com.example.tpd_client.models.User;
-import com.example.tpd_client.models.UserProduct;
+import com.example.tpd_client.dal.UserProductDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import java.awt.*;
 import java.io.IOException;
 
 @WebServlet(name = "homeServlet", value = "/home")

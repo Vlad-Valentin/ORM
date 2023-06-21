@@ -1,4 +1,4 @@
-package com.example.tpd_client.data_access;
+package com.example.tpd_client.dal;
 
 import com.example.tpd_client.models.Product;
 import com.example.tpd_client.models.UserProduct;
